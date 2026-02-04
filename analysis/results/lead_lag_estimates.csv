@@ -1,0 +1,2 @@
+theta_hat_ms,se_ms,ci_lower_ms,ci_upper_ms,t_statistic,p_value,significant_5pct,bandwidth_ms,n_days,n_bootstrap
+10,1.2719050070421043,3.5714285714285716,8.589285714285719,7.8622223708794365,3.774758283725532e-15,True,50,7,200

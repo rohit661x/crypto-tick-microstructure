@@ -1,0 +1,56 @@
+=================================================================
+ULTRA-LOW-LATENCY BTC/ETH DEPENDENCE ANALYSIS: FINAL RESULTS
+=================================================================
+
+1. COVARIANCE ESTIMATION
+----------------------------------------
+  refresh_100ms         ρ = 0.4492  [0.4485, 0.4498]
+  hayashi_yoshida       ρ = 0.0428  [0.0424, 0.0432]
+  preavg_hy             ρ = 0.8166  [0.8164, 0.8167]
+  Attenuation factor (sync/HY): 10.49
+
+2. LEAD-LAG STRUCTURE
+----------------------------------------
+  Estimated lead-lag: θ = 10ms
+  95% CI: [4ms, 9ms]
+  t-statistic: 7.86
+  p-value: 0.0000
+  Conclusion: Reject H0 — BTC leads ETH
+
+3. GRANGER CAUSALITY
+----------------------------------------
+  BTC->ETH: Significant at lags 100ms, 200ms, 300ms, 400ms, 500ms
+    Peak F=13099.8 at 100ms (p=0.00e+00)
+  ETH->BTC: Significant at lags 100ms, 200ms, 300ms, 400ms, 500ms
+    Peak F=27660.6 at 100ms (p=0.00e+00)
+
+4. INFORMATION SHARE (Hasbrouck)
+----------------------------------------
+  Δ = 5000ms: IS(BTC) = 85.9% [73.8%, 98.1%]  IS(ETH) = 14.1%  Cointegrated: Yes
+  Δ = 10000ms: IS(BTC) = 23.6% [4.8%, 42.3%]  IS(ETH) = 76.4%  Cointegrated: No
+  Δ = 30000ms: IS(BTC) = 25.9% [4.7%, 47.1%]  IS(ETH) = 74.1%  Cointegrated: No
+
+5. PREDICTABILITY (OOS)
+----------------------------------------
+  Best model: lookback=100ms, horizon=100ms
+    β = 0.2018 (SE = 0.0008)
+    t-stat = 264.1 (p = 0.00e+00)
+    In-sample R² = 0.0142
+    OOS R² = 0.0192
+    Significant horizons: 25ms, 50ms, 100ms, 200ms, 500ms
+    Predictability half-life: ~500ms
+
+6. ECONOMIC SIGNIFICANCE
+----------------------------------------
+  Config: lb=25ms h=25ms thr=1.0bps
+    Trades/day: 15,066  Hit: 44.2%  Gross SR: 252.96  Net SR: -1841.88
+  Config: lb=50ms h=50ms thr=1.0bps
+    Trades/day: 15,765  Hit: 51.4%  Gross SR: 406.33  Net SR: -1817.84
+  Config: lb=100ms h=100ms thr=1.0bps
+    Trades/day: 16,853  Hit: 52.4%  Gross SR: 501.37  Net SR: -2123.84
+  Config: lb=50ms h=50ms thr=0.5bps
+    Trades/day: 38,040  Hit: 44.4%  Gross SR: 637.45  Net SR: -4111.07
+  Config: lb=50ms h=50ms thr=2.0bps
+    Trades/day: 3,448  Hit: 61.7%  Gross SR: 183.70  Net SR: -397.15
+
+=================================================================

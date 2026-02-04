@@ -1,0 +1,38 @@
+# Data files (too large for git)
+data/raw/
+data/processed/
+*.csv
+*.parquet
+
+# But keep results CSVs tracked
+!analysis/results/*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Claude Code
+.claude/

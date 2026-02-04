@@ -1,0 +1,14 @@
+Cross-Asset Noise Independence Test
+==================================================
+
+Covariance at 100ms (daily): 0.00029404
+Covariance at 1min (daily):  0.00123025
+Ratio (fine/coarse):         0.2390
+Interpretation: Significant attenuation — noise effects dominate at fine frequencies
+
+Residual correlation test (100ms demeaned returns):
+  Coefficient (β): 0.709032
+  Standard error:  0.000593
+  t-statistic:     1196.23
+  p-value:         0.00e+00
+  Conclusion: Reject independence — microstructure noise is correlated across assets

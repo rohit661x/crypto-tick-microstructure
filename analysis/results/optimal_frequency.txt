@@ -1,0 +1,26 @@
+Optimal Sampling Frequency Analysis
+==================================================
+
+Correlation stabilizes (90% of max=0.8828) at: Δ = 5000ms
+Lead-lag significant at: Δ ≥ 500ms
+
+Recommended optimal Δ*: 5000ms
+
+At optimal Δ = 5000ms:
+  Correlation:  0.8077 (95% CI: [0.7969, 0.8191])
+  Lead-lag:     +0 lags = +0ms
+  Peak CCF:     0.8077
+  Significant:  True
+
+
+Correlation recovery curve:
+  Δ=   100ms  ρ=0.4374  (50% of max)
+  Δ=   250ms  ρ=0.5837  (66% of max)
+  Δ=   500ms  ρ=0.6600  (75% of max)
+  Δ=  1000ms  ρ=0.7188  (81% of max)
+  Δ=  2000ms  ρ=0.7632  (86% of max)
+  Δ=  5000ms  ρ=0.8077  (91% of max)
+  Δ= 10000ms  ρ=0.8298  (94% of max)
+  Δ= 30000ms  ρ=0.8631  (98% of max)
+  Δ= 60000ms  ρ=0.8828  (100% of max)
+  Δ=300000ms  ρ=0.8597  (97% of max)
