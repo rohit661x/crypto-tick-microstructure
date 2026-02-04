@@ -48,7 +48,7 @@ Trade arrivals exhibit mutual excitation: a BTC trade temporarily increases ETH 
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/crypto-tick-microstructure.git
+git clone https://github.com/rohit661x/crypto-tick-microstructure.git
 cd crypto-tick-microstructure
 pip install -r requirements.txt
 ```
